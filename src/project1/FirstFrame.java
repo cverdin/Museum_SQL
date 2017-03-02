@@ -2,7 +2,10 @@ package project1;
 
 import java.awt.Color;
 import java.awt.Dimension;
+<<<<<<< HEAD
 import java.awt.Font;
+=======
+>>>>>>> a8355c1ff6225dc002492c9259b2dbdfa870667d
 import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -10,8 +13,11 @@ import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+<<<<<<< HEAD
 import java.util.Random;
 
+=======
+>>>>>>> a8355c1ff6225dc002492c9259b2dbdfa870667d
 import javax.imageio.ImageIO;
 import javax.swing.AbstractAction;
 import javax.swing.Action;
@@ -21,7 +27,10 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.KeyStroke;
+<<<<<<< HEAD
 import javax.swing.border.Border;
+=======
+>>>>>>> a8355c1ff6225dc002492c9259b2dbdfa870667d
 
 @SuppressWarnings("serial")
 class FirstFrame extends JPanel implements ActionListener {
@@ -30,17 +39,25 @@ class FirstFrame extends JPanel implements ActionListener {
     private JButton search;
     private JButton creators;
     private JButton exit;
+<<<<<<< HEAD
     private JButton nextPic;
     private JButton prevPic;
     private JFrame f;
     private String backgroundFilename;
     
+=======
+    private JFrame f;
+    
+    // method: FirstFrame
+    // purpose: Default Constructor
+>>>>>>> a8355c1ff6225dc002492c9259b2dbdfa870667d
     public FirstFrame(){
     }
     
     // method: FirstFrame
     // purpose: Constructor, initialize variables
     public FirstFrame(JFrame frame){
+<<<<<<< HEAD
     	backgroundFilename = "starryNight.jpg";
         setBorder(BorderFactory.createLineBorder(Color.black));
         setBackground(Color.BLACK);
@@ -52,6 +69,14 @@ class FirstFrame extends JPanel implements ActionListener {
         exit = new JButton("Exit");
         nextPic.addActionListener(this);
         prevPic.addActionListener(this);
+=======
+        setBorder(BorderFactory.createLineBorder(Color.black));
+        setBackground(Color.BLACK);
+        pic = null;
+        search = new JButton("Search Database");
+        creators = new JButton("Creators");
+        exit = new JButton("Exit");
+>>>>>>> a8355c1ff6225dc002492c9259b2dbdfa870667d
         search.addActionListener(this);
         creators.addActionListener(this);
         exit.addActionListener(this);
@@ -74,15 +99,26 @@ class FirstFrame extends JPanel implements ActionListener {
         this.getActionMap().put("exitGame",exitGame);
     }
     
+<<<<<<< HEAD
+=======
+    // method: getPrefferedSize
+    // purpose: sets the default size of screen to 600x400
+>>>>>>> a8355c1ff6225dc002492c9259b2dbdfa870667d
     @Override
     public Dimension getPreferredSize() {
         return new Dimension(600,400);
     }
     
+<<<<<<< HEAD
+=======
+    // method: paintComponent
+    // purpose: draw everything to the screen
+>>>>>>> a8355c1ff6225dc002492c9259b2dbdfa870667d
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         try{
+<<<<<<< HEAD
             pic = ImageIO.read(new File(backgroundFilename));
 //            pic = ImageIO.read(new File("articuno.png"));
         }catch(IOException e){System.out.println("failed");}
@@ -140,6 +176,28 @@ class FirstFrame extends JPanel implements ActionListener {
         exit.setOpaque(false);
         exit.setFont(boldFont);
         exit.setBorder(BorderFactory.createLineBorder(Color.white, 3));
+=======
+            pic = ImageIO.read(new File("articuno.png"));
+        }catch(IOException e){System.out.println("failed");}
+        g.drawImage(pic,50, 50, 300, 300, this);
+      
+        search.setForeground(Color.white);
+        search.setBackground(Color.black);
+        search.setBounds(450, 200, 140, 50);
+        search.setToolTipText("Click Here To Play");
+        add(search);
+        
+        creators.setForeground(Color.white);
+        creators.setBackground(Color.black);
+        creators.setBounds(450, 260, 140, 50);
+        creators.setToolTipText("Click Here To See creators");
+        add(creators);
+        
+        exit.setForeground(Color.white);
+        exit.setBackground(Color.black);
+        exit.setBounds(450, 320, 140, 50);
+        exit.setToolTipText("Click Here To exit");
+>>>>>>> a8355c1ff6225dc002492c9259b2dbdfa870667d
         add(exit);
         
     }
@@ -150,6 +208,7 @@ class FirstFrame extends JPanel implements ActionListener {
         //it will create different frame for it
     @Override
     public void actionPerformed(ActionEvent e) {       
+<<<<<<< HEAD
     	
         if(e.getSource() == creators)
         {
@@ -160,11 +219,19 @@ class FirstFrame extends JPanel implements ActionListener {
             f.pack();
             f.setVisible(true);
             f.setLocationRelativeTo(null);
+=======
+        f.dispose();
+        if(e.getSource() == creators)
+        {
+            f = new JFrame("creators");
+            f.add(new CreatorFrame(f));
+>>>>>>> a8355c1ff6225dc002492c9259b2dbdfa870667d
         }
         else if(e.getSource() == exit)
         {
         	System.exit(0);
         }
+<<<<<<< HEAD
         else if(e.getSource() == search)
         {
             f.dispose();
@@ -204,5 +271,21 @@ class FirstFrame extends JPanel implements ActionListener {
     	Random rand = new Random();
     	return rand.nextInt(high) + low;
     }
+=======
+        else
+        {
+            f = new JFrame("Search");
+            f.add(new SearchFrame(f));
+            //NOTE: CHANGED TO SEVENTHFRAME FOR TESTING!! UNCOMMENT LINE ABOVE
+            //AND DELETE LINE BELOW TO SET BACK TO NORMAL
+            
+        }
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f.pack();
+        f.setVisible(true);
+        f.setLocationRelativeTo(null);
+        
+    }
+>>>>>>> a8355c1ff6225dc002492c9259b2dbdfa870667d
     
 }

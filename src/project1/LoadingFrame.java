@@ -67,6 +67,10 @@ public class LoadingFrame extends JPanel{
         }catch(IOException e){System.out.println("failed");}
         g.drawImage(pic,0, 0, 600, 400, this);
 
+<<<<<<< HEAD
+=======
+        //paint HANGMAN to the screen
+>>>>>>> a8355c1ff6225dc002492c9259b2dbdfa870667d
         Font font = new Font("Arial", Font.BOLD, 60);
         Graphics2D g2 = (Graphics2D) g;
         g2.setFont(font);
@@ -74,11 +78,19 @@ public class LoadingFrame extends JPanel{
         g2.setColor(Color.white);
         g2.drawString("Where Art Thou", 75, 50);
 
+<<<<<<< HEAD
+=======
+        //paint LOADING to the screen
+>>>>>>> a8355c1ff6225dc002492c9259b2dbdfa870667d
         font = new Font("Arial", Font.BOLD, 30);
         g2.setFont(font);
         g2.setColor(Color.white);
         g2.drawString("LOADING...", 220, 320);
 
+<<<<<<< HEAD
+=======
+        //paint Team Mystic to the screen
+>>>>>>> a8355c1ff6225dc002492c9259b2dbdfa870667d
         font = new Font("Arial", Font.BOLD, 20);
         g2.setFont(font);
         g2.setColor(Color.white);

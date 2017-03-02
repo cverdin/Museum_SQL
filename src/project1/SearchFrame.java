@@ -7,11 +7,16 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
+<<<<<<< HEAD
 import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+=======
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+>>>>>>> a8355c1ff6225dc002492c9259b2dbdfa870667d
 import javax.swing.AbstractAction;
 import javax.swing.Action;
 import javax.swing.KeyStroke;
@@ -23,6 +28,7 @@ public class SearchFrame extends JPanel implements ActionListener {
     private JFrame f;
     private JFrame results;
     private JButton exit;
+<<<<<<< HEAD
     private JButton search;    
     private JLabel nameLabel;
     private JLabel epochLabel;
@@ -37,11 +43,14 @@ public class SearchFrame extends JPanel implements ActionListener {
     private JCheckBox permanentCollection;
     private JCheckBox borrowed;
     private JCheckBox ongoingExhibition;
+=======
+>>>>>>> a8355c1ff6225dc002492c9259b2dbdfa870667d
     
     public SearchFrame(){
     }
     
     public SearchFrame(JFrame frame){
+<<<<<<< HEAD
     	
     	nameLabel = new JLabel("Name: ");
     	epochLabel = new JLabel("Epoch: ");
@@ -79,6 +88,15 @@ public class SearchFrame extends JPanel implements ActionListener {
         search.setToolTipText("Click to Search");
         search.addActionListener(this);
 
+=======
+        setBorder(BorderFactory.createLineBorder(Color.black));
+        setBackground(Color.BLACK);
+        f=frame;
+        exit = new JButton("Give Up");
+        exit.setToolTipText("Click to give up and skip this game");
+        exit.addActionListener(this);
+
+>>>>>>> a8355c1ff6225dc002492c9259b2dbdfa870667d
         Action exitGame = new AbstractAction(){
             public void actionPerformed(ActionEvent e) {
                  System.exit(0);
@@ -101,6 +119,7 @@ public class SearchFrame extends JPanel implements ActionListener {
           
         exit.setForeground(Color.blue);
         exit.setBackground(Color.black);
+<<<<<<< HEAD
         exit.setBounds(510, 330, 80, 40);
         add(exit);
         
@@ -112,10 +131,16 @@ public class SearchFrame extends JPanel implements ActionListener {
         name.setBounds(10,10,150,20);
         add(name);
         
+=======
+        exit.setBounds(430, 130, 80, 40);
+        add(exit);
+        
+>>>>>>> a8355c1ff6225dc002492c9259b2dbdfa870667d
     }
     
     @Override
     public void actionPerformed(ActionEvent e) {
+<<<<<<< HEAD
     	String nameText = "";
     	String epochText = "";
     	String artistText = "";
@@ -140,6 +165,12 @@ public class SearchFrame extends JPanel implements ActionListener {
         	borrowedBool = borrowed.isSelected();
         	ongoingExhibitionBool = ongoingExhibition.isSelected();
         }
+=======
+        if(e.getSource()==exit&&exit.isEnabled()){
+            exit.setEnabled(false);
+            exitGame();
+        }
+>>>>>>> a8355c1ff6225dc002492c9259b2dbdfa870667d
     }
     @SuppressWarnings("unused")
 	private void search(){
