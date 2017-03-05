@@ -2,7 +2,14 @@ package project1;
 
 import java.awt.Color;
 import java.awt.Dimension;
+<<<<<<< HEAD
 import java.awt.Font;
+=======
+<<<<<<< HEAD
+import java.awt.Font;
+=======
+>>>>>>> a8355c1ff6225dc002492c9259b2dbdfa870667d
+>>>>>>> 2f03caeb8f25b55a71212f23363fe54ff7b2a553
 import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -10,8 +17,16 @@ import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+<<<<<<< HEAD
 import java.util.Random;
 
+=======
+<<<<<<< HEAD
+import java.util.Random;
+
+=======
+>>>>>>> a8355c1ff6225dc002492c9259b2dbdfa870667d
+>>>>>>> 2f03caeb8f25b55a71212f23363fe54ff7b2a553
 import javax.imageio.ImageIO;
 import javax.swing.AbstractAction;
 import javax.swing.Action;
@@ -21,7 +36,14 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.KeyStroke;
+<<<<<<< HEAD
 import javax.swing.border.Border;
+=======
+<<<<<<< HEAD
+import javax.swing.border.Border;
+=======
+>>>>>>> a8355c1ff6225dc002492c9259b2dbdfa870667d
+>>>>>>> 2f03caeb8f25b55a71212f23363fe54ff7b2a553
 
 @SuppressWarnings("serial")
 class FirstFrame extends JPanel implements ActionListener {
@@ -30,17 +52,34 @@ class FirstFrame extends JPanel implements ActionListener {
     private JButton search;
     private JButton creators;
     private JButton exit;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2f03caeb8f25b55a71212f23363fe54ff7b2a553
     private JButton nextPic;
     private JButton prevPic;
     private JFrame f;
     private String backgroundFilename;
     
+<<<<<<< HEAD
+=======
+=======
+    private JFrame f;
+    
+    // method: FirstFrame
+    // purpose: Default Constructor
+>>>>>>> a8355c1ff6225dc002492c9259b2dbdfa870667d
+>>>>>>> 2f03caeb8f25b55a71212f23363fe54ff7b2a553
     public FirstFrame(){
     }
     
     // method: FirstFrame
     // purpose: Constructor, initialize variables
     public FirstFrame(JFrame frame){
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2f03caeb8f25b55a71212f23363fe54ff7b2a553
     	backgroundFilename = "starryNight.jpg";
         setBorder(BorderFactory.createLineBorder(Color.black));
         setBackground(Color.BLACK);
@@ -52,12 +91,34 @@ class FirstFrame extends JPanel implements ActionListener {
         exit = new JButton("Exit");
         nextPic.addActionListener(this);
         prevPic.addActionListener(this);
+<<<<<<< HEAD
+=======
+=======
+        setBorder(BorderFactory.createLineBorder(Color.black));
+        setBackground(Color.BLACK);
+        pic = null;
+        search = new JButton("Search Database");
+        creators = new JButton("Creators");
+        exit = new JButton("Exit");
+>>>>>>> a8355c1ff6225dc002492c9259b2dbdfa870667d
+>>>>>>> 2f03caeb8f25b55a71212f23363fe54ff7b2a553
         search.addActionListener(this);
         creators.addActionListener(this);
         exit.addActionListener(this);
         f = frame;   
         
+<<<<<<< HEAD
        
+=======
+        Action showInfo = new AbstractAction(){
+            public void actionPerformed(ActionEvent e) {
+                 JOptionPane.showMessageDialog(null, "Reyhan Patia, 011370580\nMichael T Kries, 009862307\nMystic's Games, Summer 2016");
+            }
+        };
+        this.getInputMap().put(KeyStroke.getKeyStroke("F1"), "showInfo");
+        this.getActionMap().put("showInfo",showInfo);
+        
+>>>>>>> 2f03caeb8f25b55a71212f23363fe54ff7b2a553
         Action exitGame = new AbstractAction(){
             public void actionPerformed(ActionEvent e) {
                  System.exit(0);
@@ -67,15 +128,35 @@ class FirstFrame extends JPanel implements ActionListener {
         this.getActionMap().put("exitGame",exitGame);
     }
     
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    // method: getPrefferedSize
+    // purpose: sets the default size of screen to 600x400
+>>>>>>> a8355c1ff6225dc002492c9259b2dbdfa870667d
+>>>>>>> 2f03caeb8f25b55a71212f23363fe54ff7b2a553
     @Override
     public Dimension getPreferredSize() {
         return new Dimension(600,400);
     }
     
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    // method: paintComponent
+    // purpose: draw everything to the screen
+>>>>>>> a8355c1ff6225dc002492c9259b2dbdfa870667d
+>>>>>>> 2f03caeb8f25b55a71212f23363fe54ff7b2a553
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         try{
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2f03caeb8f25b55a71212f23363fe54ff7b2a553
             pic = ImageIO.read(new File(backgroundFilename));
 //            pic = ImageIO.read(new File("articuno.png"));
         }catch(IOException e){System.out.println("failed");}
@@ -133,6 +214,31 @@ class FirstFrame extends JPanel implements ActionListener {
         exit.setOpaque(false);
         exit.setFont(boldFont);
         exit.setBorder(BorderFactory.createLineBorder(Color.white, 3));
+<<<<<<< HEAD
+=======
+=======
+            pic = ImageIO.read(new File("articuno.png"));
+        }catch(IOException e){System.out.println("failed");}
+        g.drawImage(pic,50, 50, 300, 300, this);
+      
+        search.setForeground(Color.white);
+        search.setBackground(Color.black);
+        search.setBounds(450, 200, 140, 50);
+        search.setToolTipText("Click Here To Play");
+        add(search);
+        
+        creators.setForeground(Color.white);
+        creators.setBackground(Color.black);
+        creators.setBounds(450, 260, 140, 50);
+        creators.setToolTipText("Click Here To See creators");
+        add(creators);
+        
+        exit.setForeground(Color.white);
+        exit.setBackground(Color.black);
+        exit.setBounds(450, 320, 140, 50);
+        exit.setToolTipText("Click Here To exit");
+>>>>>>> a8355c1ff6225dc002492c9259b2dbdfa870667d
+>>>>>>> 2f03caeb8f25b55a71212f23363fe54ff7b2a553
         add(exit);
         
     }
@@ -143,6 +249,10 @@ class FirstFrame extends JPanel implements ActionListener {
         //it will create different frame for it
     @Override
     public void actionPerformed(ActionEvent e) {       
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2f03caeb8f25b55a71212f23363fe54ff7b2a553
     	
         if(e.getSource() == creators)
         {
@@ -153,11 +263,25 @@ class FirstFrame extends JPanel implements ActionListener {
             f.pack();
             f.setVisible(true);
             f.setLocationRelativeTo(null);
+<<<<<<< HEAD
+=======
+=======
+        f.dispose();
+        if(e.getSource() == creators)
+        {
+            f = new JFrame("creators");
+            f.add(new CreatorFrame(f));
+>>>>>>> a8355c1ff6225dc002492c9259b2dbdfa870667d
+>>>>>>> 2f03caeb8f25b55a71212f23363fe54ff7b2a553
         }
         else if(e.getSource() == exit)
         {
         	System.exit(0);
         }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2f03caeb8f25b55a71212f23363fe54ff7b2a553
         else if(e.getSource() == search)
         {
             f.dispose();
@@ -197,5 +321,24 @@ class FirstFrame extends JPanel implements ActionListener {
     	Random rand = new Random();
     	return rand.nextInt(high) + low;
     }
+<<<<<<< HEAD
+=======
+=======
+        else
+        {
+            f = new JFrame("Search");
+            f.add(new SearchFrame(f));
+            //NOTE: CHANGED TO SEVENTHFRAME FOR TESTING!! UNCOMMENT LINE ABOVE
+            //AND DELETE LINE BELOW TO SET BACK TO NORMAL
+            
+        }
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f.pack();
+        f.setVisible(true);
+        f.setLocationRelativeTo(null);
+        
+    }
+>>>>>>> a8355c1ff6225dc002492c9259b2dbdfa870667d
+>>>>>>> 2f03caeb8f25b55a71212f23363fe54ff7b2a553
     
 }

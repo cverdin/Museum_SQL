@@ -40,7 +40,17 @@ public class CreatorFrame extends JPanel implements ActionListener {
         back = new JButton("Back");
         f = frame;
         
+<<<<<<< HEAD
       
+=======
+        Action showInfo = new AbstractAction(){
+            public void actionPerformed(ActionEvent e) {
+                 JOptionPane.showMessageDialog(null, "Reyhan Patia, 011370580\nMichael T Kries, 009862307\nMystic's Games, Summer 2016");
+            }
+        };
+        this.getInputMap().put(KeyStroke.getKeyStroke("F1"), "showInfo");
+        this.getActionMap().put("showInfo",showInfo);
+>>>>>>> 2f03caeb8f25b55a71212f23363fe54ff7b2a553
         
         Action exitGame = new AbstractAction(){
             public void actionPerformed(ActionEvent e) {

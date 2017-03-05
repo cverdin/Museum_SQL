@@ -5,17 +5,24 @@ import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
+<<<<<<< HEAD
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
+=======
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
+<<<<<<< HEAD
+>>>>>>> 2f03caeb8f25b55a71212f23363fe54ff7b2a553
 import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+<<<<<<< HEAD
 import javax.imageio.ImageIO;
 import javax.swing.AbstractAction;
 import javax.swing.Action;
@@ -23,6 +30,16 @@ import javax.swing.KeyStroke;
 import java.sql.*;
 import java.util.LinkedList;
 import java.util.Queue;
+=======
+=======
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+>>>>>>> a8355c1ff6225dc002492c9259b2dbdfa870667d
+import javax.swing.AbstractAction;
+import javax.swing.Action;
+import javax.swing.KeyStroke;
+
+>>>>>>> 2f03caeb8f25b55a71212f23363fe54ff7b2a553
 
 @SuppressWarnings("serial")
 public class SearchFrame extends JPanel implements ActionListener {
@@ -30,6 +47,10 @@ public class SearchFrame extends JPanel implements ActionListener {
     private JFrame f;
     private JFrame results;
     private JButton exit;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2f03caeb8f25b55a71212f23363fe54ff7b2a553
     private JButton search;    
     private JLabel nameLabel;
     private JLabel epochLabel;
@@ -44,10 +65,21 @@ public class SearchFrame extends JPanel implements ActionListener {
     private JCheckBox permanentCollection;
     private JCheckBox borrowed;
     private JCheckBox ongoingExhibition;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> a8355c1ff6225dc002492c9259b2dbdfa870667d
+    
+>>>>>>> 2f03caeb8f25b55a71212f23363fe54ff7b2a553
     public SearchFrame(){
     }
     
     public SearchFrame(JFrame frame){
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    	
+>>>>>>> 2f03caeb8f25b55a71212f23363fe54ff7b2a553
     	nameLabel = new JLabel("Name: ");
     	epochLabel = new JLabel("Epoch: ");
     	artistLabel = new JLabel("Artist: ");
@@ -60,11 +92,16 @@ public class SearchFrame extends JPanel implements ActionListener {
     	location = new JTextField("");
     	date = new JTextField("");
     	permanentCollection = new JCheckBox("Permanent Collection?");
+<<<<<<< HEAD
     	permanentCollection.setOpaque(false);
     	borrowed = new JCheckBox("Borrowed?");
     	borrowed.setOpaque(false);
     	ongoingExhibition = new JCheckBox("Ongoing Exhibition?");
     	ongoingExhibition.setOpaque(false);
+=======
+    	borrowed = new JCheckBox("Borrowed?");
+    	ongoingExhibition = new JCheckBox("Ongoing Exhibition?");
+>>>>>>> 2f03caeb8f25b55a71212f23363fe54ff7b2a553
     	
     	name.addActionListener(this);
     	epoch.addActionListener(this);
@@ -77,7 +114,11 @@ public class SearchFrame extends JPanel implements ActionListener {
     	
     	
         setBorder(BorderFactory.createLineBorder(Color.black));
+<<<<<<< HEAD
         setBackground(Color.lightGray);
+=======
+        setBackground(Color.BLACK);
+>>>>>>> 2f03caeb8f25b55a71212f23363fe54ff7b2a553
         f=frame;
         exit = new JButton("Back");
         exit.setToolTipText("Click to go back to main menu");
@@ -87,6 +128,18 @@ public class SearchFrame extends JPanel implements ActionListener {
         search.setToolTipText("Click to Search");
         search.addActionListener(this);
 
+<<<<<<< HEAD
+=======
+=======
+        setBorder(BorderFactory.createLineBorder(Color.black));
+        setBackground(Color.BLACK);
+        f=frame;
+        exit = new JButton("Give Up");
+        exit.setToolTipText("Click to give up and skip this game");
+        exit.addActionListener(this);
+
+>>>>>>> a8355c1ff6225dc002492c9259b2dbdfa870667d
+>>>>>>> 2f03caeb8f25b55a71212f23363fe54ff7b2a553
         Action exitGame = new AbstractAction(){
             public void actionPerformed(ActionEvent e) {
                  System.exit(0);
@@ -100,14 +153,19 @@ public class SearchFrame extends JPanel implements ActionListener {
     
     @Override
     public Dimension getPreferredSize() {
+<<<<<<< HEAD
         return new Dimension(390,400);
 //        return new Dimension(600,400);
+=======
+        return new Dimension(600,400);
+>>>>>>> 2f03caeb8f25b55a71212f23363fe54ff7b2a553
     }
     
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
           
+<<<<<<< HEAD
         exit.setForeground(Color.black);
 //        exit.setBackground(Color.black);
         exit.setForeground(Color.black);
@@ -183,10 +241,35 @@ public class SearchFrame extends JPanel implements ActionListener {
     		System.out.println("Class.forName Error");
     	}
     	return null;
+=======
+        exit.setForeground(Color.blue);
+        exit.setBackground(Color.black);
+<<<<<<< HEAD
+        exit.setBounds(510, 330, 80, 40);
+        add(exit);
+        
+        search.setForeground(Color.blue);
+        search.setBackground(Color.black);
+        search.setBounds(430, 330, 80, 40);
+        add(search);
+        
+        name.setBounds(10,10,150,20);
+        add(name);
+        
+=======
+        exit.setBounds(430, 130, 80, 40);
+        add(exit);
+        
+>>>>>>> a8355c1ff6225dc002492c9259b2dbdfa870667d
+>>>>>>> 2f03caeb8f25b55a71212f23363fe54ff7b2a553
     }
     
     @Override
     public void actionPerformed(ActionEvent e) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2f03caeb8f25b55a71212f23363fe54ff7b2a553
     	String nameText = "";
     	String epochText = "";
     	String artistText = "";
@@ -210,6 +293,7 @@ public class SearchFrame extends JPanel implements ActionListener {
         	permanentCollectionBool = permanentCollection.isSelected();
         	borrowedBool = borrowed.isSelected();
         	ongoingExhibitionBool = ongoingExhibition.isSelected();
+<<<<<<< HEAD
 
         	String permanentText ="";
         	String borrowedText = "";
@@ -305,6 +389,16 @@ public class SearchFrame extends JPanel implements ActionListener {
     	return base;
     }
     
+=======
+        }
+=======
+        if(e.getSource()==exit&&exit.isEnabled()){
+            exit.setEnabled(false);
+            exitGame();
+        }
+>>>>>>> a8355c1ff6225dc002492c9259b2dbdfa870667d
+    }
+>>>>>>> 2f03caeb8f25b55a71212f23363fe54ff7b2a553
     @SuppressWarnings("unused")
 	private void search(){
     	results = new JFrame("Results");

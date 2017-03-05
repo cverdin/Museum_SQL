@@ -31,6 +31,17 @@ public class LoadingFrame extends JPanel{
         setBackground(Color.BLACK);
         pic = null;
         
+<<<<<<< HEAD
+=======
+        Action showInfo = new AbstractAction(){
+            public void actionPerformed(ActionEvent e) {
+                 JOptionPane.showMessageDialog(null, "Reyhan Patia, 011370580\nMichael T Kries, 009862307\nMystic's Games, Summer 2016");
+            }
+        };
+        this.getInputMap().put(KeyStroke.getKeyStroke("F1"), "showInfo");
+        this.getActionMap().put("showInfo",showInfo);
+        
+>>>>>>> 2f03caeb8f25b55a71212f23363fe54ff7b2a553
         Action exitGame = new AbstractAction(){
             public void actionPerformed(ActionEvent e) {
                  System.exit(0);
@@ -59,6 +70,13 @@ public class LoadingFrame extends JPanel{
         }catch(IOException e){System.out.println("failed");}
         g.drawImage(pic,0, 0, 600, 400, this);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+        //paint HANGMAN to the screen
+>>>>>>> a8355c1ff6225dc002492c9259b2dbdfa870667d
+>>>>>>> 2f03caeb8f25b55a71212f23363fe54ff7b2a553
         Font font = new Font("Arial", Font.BOLD, 60);
         Graphics2D g2 = (Graphics2D) g;
         g2.setFont(font);
@@ -66,11 +84,25 @@ public class LoadingFrame extends JPanel{
         g2.setColor(Color.white);
         g2.drawString("Where Art Thou", 75, 50);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+        //paint LOADING to the screen
+>>>>>>> a8355c1ff6225dc002492c9259b2dbdfa870667d
+>>>>>>> 2f03caeb8f25b55a71212f23363fe54ff7b2a553
         font = new Font("Arial", Font.BOLD, 30);
         g2.setFont(font);
         g2.setColor(Color.white);
         g2.drawString("LOADING...", 220, 320);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+        //paint Team Mystic to the screen
+>>>>>>> a8355c1ff6225dc002492c9259b2dbdfa870667d
+>>>>>>> 2f03caeb8f25b55a71212f23363fe54ff7b2a553
         font = new Font("Arial", Font.BOLD, 20);
         g2.setFont(font);
         g2.setColor(Color.white);
